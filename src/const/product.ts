@@ -30,7 +30,7 @@ export const featuredProduct = [
     wide: false,
   },
   {
-    name: "Print Design",
+    name: "Design",
     description: "Lorem ipsum dolor sit amet.",
     url: product6,
     wide: true,

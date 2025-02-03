@@ -54,7 +54,7 @@ const HeroSlider: React.FC<SliderProps> = ({
   }, [resetAutoPlayTimer]);
 
   return (
-    <div className="col-span-8 relative h-full w-full group overflow-hidden rounded-lg">
+    <div className="col-span-10 relative h-full w-full group overflow-hidden rounded-lg">
       <div
         className="w-full h-full flex flex-col flex-wrap"
         style={{
