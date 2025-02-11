@@ -1,13 +1,17 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { products } from '../const/product'
-import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const Product = () => {
   const param = useParams();
   const [show, setShow] = useState(false);
 
   const product = products.find(f => f.name === param.product)
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [product]);
 
   return (
     <>
@@ -58,8 +62,8 @@ const Product = () => {
           {products
             .filter((f) => f.name !== product?.name)
             .map((product, index) => (
-              <a
-                href={"/category/" + product.categoryURL + "/" + product.name}
+              <Link
+                to={"/category/" + product.categoryURL + "/" + product.name}
                 className="col-span-1 h-[12rem] flex flex-col shadow rounded-lg overflow-hidden"
                 key={index}
               >
@@ -84,7 +88,7 @@ const Product = () => {
                   <p>10 Wishlist</p>
                 </div> */}
                 </div>
-              </a>
+              </Link>
             ))}
         </div>
       </div>

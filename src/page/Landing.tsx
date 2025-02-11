@@ -4,8 +4,13 @@ import { featuredProduct, products } from "../const/product";
 import HeroSlider from "../components/HeroSlider";
 import { sliders } from "../const/slider";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Landing() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="px-[18rem] py-8 h-[calc(100vh*0.6)] grid grid-cols-10 gap-12 overflow-hidden">
@@ -57,8 +62,8 @@ function Landing() {
             } else {
               if (product.name === "Desain") {
                 return (
-                  <a
-                    href={"/category/desain/Desain%20Grafis"}
+                  <Link
+                    to={"/category/desain/Desain%20Grafis"}
                     key={index}
                     className={clsx(
                       "flex flex-col relative bg-cover bg-center rounded-lg p-4 hover:scale-105 transition shadow-lg",
@@ -77,7 +82,7 @@ function Landing() {
                     <div className="w-full absolute bottom-0 left-0 pb-4 pt-16 text-center bg-gradient-to-t from-neutral-100 to-indigo-transparent rounded-lg">
                       <p className="font-medium">{product.name}</p>
                     </div>
-                  </a>
+                  </Link>
                 );
               } else {
                 return (
@@ -111,7 +116,11 @@ function Landing() {
       <div className="px-[18rem] py-8 space-y-6 border-t-8  border-zinc-100/30">
         <div className="grid grid-cols-5 gap-6">
           {products.map((product, index) => (
-            <a href={"/category/"+ product.categoryURL + "/" + product.name} className="col-span-1 h-[12rem] flex flex-col shadow rounded-lg overflow-hidden" key={index}>
+            <Link
+              to={"/category/" + product.categoryURL + "/" + product.name}
+              className="col-span-1 h-[12rem] flex flex-col shadow rounded-lg overflow-hidden"
+              key={index}
+            >
               <div
                 className="basis-3/5 bg-cover bg-center"
                 style={{
@@ -119,8 +128,12 @@ function Landing() {
                 }}
               ></div>
               <div className="basis-2/5 py-4 px-2 flex flex-col gap-2">
-                <p className="text-sm line-clamp-2 font-medium">{product.name}</p>
-                <p className="text-xs bg-sky-900 w-fit text-white py-1 px-3 rounded-md">{product.category}</p>
+                <p className="text-sm line-clamp-2 font-medium">
+                  {product.name}
+                </p>
+                <p className="text-xs bg-sky-900 w-fit text-white py-1 px-3 rounded-md">
+                  {product.category}
+                </p>
                 {/* <h2 className="font-medium">
                   Rp{product.price.toLocaleString("id")}
                 </h2>
@@ -129,7 +142,7 @@ function Landing() {
                   <p>10 Wishlist</p>
                 </div> */}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
