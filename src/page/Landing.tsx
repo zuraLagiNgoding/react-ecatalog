@@ -55,29 +55,55 @@ function Landing() {
                 </Link>
               );
             } else {
-              return (
-                <a
-                  href={"/category/desain/Desain%20Grafis"}
-                  key={index}
-                  className={clsx(
-                    "flex flex-col relative bg-cover bg-center rounded-lg p-4 hover:scale-105 transition shadow-lg",
-                    product.wide ? "col-span-2" : "col-span-1",
-                    "h-[16rem]"
-                  )}
-                  style={{
-                    backgroundImage: `url(${product.image})`,
-                  }}
-                >
-                  {/* <div className="absolute top-3 right-3">
-                    <p className="text-sm font-medium bg-neutral-800 text-white w-fit px-3 py-1.5 rounded-full">
-                      Rp{product.price.toLocaleString("id")}
-                    </p>
-                  </div> */}
-                  <div className="w-full absolute bottom-0 left-0 pb-4 pt-16 text-center bg-gradient-to-t from-neutral-100 to-indigo-transparent rounded-lg">
-                    <p className="font-medium">{product.name}</p>
-                  </div>
-                </a>
-              );
+              if (product.name === "Desain") {
+                return (
+                  <a
+                    href={"/category/desain/Desain%20Grafis"}
+                    key={index}
+                    className={clsx(
+                      "flex flex-col relative bg-cover bg-center rounded-lg p-4 hover:scale-105 transition shadow-lg",
+                      product.wide ? "col-span-2" : "col-span-1",
+                      "h-[16rem]"
+                    )}
+                    style={{
+                      backgroundImage: `url(${product.image})`,
+                    }}
+                  >
+                    {/* <div className="absolute top-3 right-3">
+                      <p className="text-sm font-medium bg-neutral-800 text-white w-fit px-3 py-1.5 rounded-full">
+                        Rp{product.price.toLocaleString("id")}
+                      </p>
+                    </div> */}
+                    <div className="w-full absolute bottom-0 left-0 pb-4 pt-16 text-center bg-gradient-to-t from-neutral-100 to-indigo-transparent rounded-lg">
+                      <p className="font-medium">{product.name}</p>
+                    </div>
+                  </a>
+                );
+              } else {
+                return (
+                  <Link
+                    to={"/category/" + product.url}
+                    key={index}
+                    className={clsx(
+                      "flex flex-col relative bg-cover bg-center rounded-lg p-4 hover:scale-105 transition shadow-lg",
+                      product.wide ? "col-span-2" : "col-span-1",
+                      "h-[16rem]"
+                    )}
+                    style={{
+                      backgroundImage: `url(${product.image})`,
+                    }}
+                  >
+                    {/* <div className="absolute top-3 right-3">
+                      <p className="text-sm font-medium bg-neutral-800 text-white w-fit px-3 py-1.5 rounded-full">
+                        Rp{product.price.toLocaleString("id")}
+                      </p>
+                    </div> */}
+                    <div className="w-full absolute bottom-0 left-0 pb-4 pt-16 text-center bg-gradient-to-t from-neutral-100 to-indigo-transparent rounded-lg">
+                      <p className="font-medium">{product.name}</p>
+                    </div>
+                  </Link>
+                );
+              }
             }
           })}
         </div>
