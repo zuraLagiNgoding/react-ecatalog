@@ -50,7 +50,6 @@ function Landing() {
                   <div className="flex flex-col h-full">
                     <div className="mt-4">
                       <p className="text-2xl font-semibold">{product.name}</p>
-                      <p className="text-gray-600">{product.description}</p>
                     </div>
                   </div>
                 </Link>
@@ -86,7 +85,7 @@ function Landing() {
       <div className="px-[18rem] py-8 space-y-6 border-t-8  border-zinc-100/30">
         <div className="grid grid-cols-5 gap-6">
           {products.map((product, index) => (
-            <Link to={"/category/"+ product.categoryURL + "/" + product.name} className="col-span-1 h-[12rem] flex flex-col shadow rounded-lg overflow-hidden" key={index}>
+            <a href={"/category/"+ product.categoryURL + "/" + product.name} className="col-span-1 h-[12rem] flex flex-col shadow rounded-lg overflow-hidden" key={index}>
               <div
                 className="basis-3/5 bg-cover bg-center"
                 style={{
@@ -104,7 +103,7 @@ function Landing() {
                   <p>10 Wishlist</p>
                 </div> */}
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
