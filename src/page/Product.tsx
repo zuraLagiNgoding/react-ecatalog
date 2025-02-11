@@ -16,7 +16,7 @@ const Product = () => {
           <img
             src={product?.url}
             alt={product?.name}
-            className="h-full object-cover shadow-xl rounded-xl"
+            className="max-h-[25rem] w-full object-cover shadow-xl rounded-xl"
           />
         </div>
         <div className="basis-3/12 space-y-3">

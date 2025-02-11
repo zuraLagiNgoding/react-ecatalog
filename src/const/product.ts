@@ -15,6 +15,13 @@ import p8 from "../assets/products/8.png";
 import p9 from "../assets/products/9.png";
 import p10 from "../assets/products/10.png";
 import p11 from "../assets/products/11.png";
+import p12 from "../assets/products/12.webp";
+import p13 from "../assets/products/13.webp";
+import p14 from "../assets/products/14.webp";
+import p15 from "../assets/products/15.webp";
+import p16 from "../assets/products/16.webp";
+import p17 from "../assets/products/17.png";
+import p18 from "../assets/products/18.png";
 
 import pd1 from "../assets/products/detail/1.png";
 import pd2 from "../assets/products/detail/2.png";
@@ -27,6 +34,13 @@ import pd8 from "../assets/products/detail/8.png";
 import pd9 from "../assets/products/detail/9.png";
 import pd10 from "../assets/products/detail/10.png";
 import pd11 from "../assets/products/detail/11.png";
+import pd14 from "../assets/products/detail/14.png";
+import pd15 from "../assets/products/detail/15.png";
+import pd16 from "../assets/products/detail/16.png";
+import pd17 from "../assets/products/detail/17.png";
+import pd18 from "../assets/products/detail/18.png";
+import pd19 from "../assets/products/detail/19.png";
+import pd20 from "../assets/products/detail/20.png";
 
 export const featuredProduct = [
   {
@@ -44,11 +58,11 @@ export const featuredProduct = [
     url: "website-app",
   },
   {
-    name: "Design",
+    name: "Desain",
     description: "Lorem ipsum dolor sit amet.",
     image: product6,
     wide: true,
-    url: "design",
+    url: "desain",
   },
   {
     name: "Mobile App",
@@ -183,6 +197,83 @@ export const products = [
     category: "Game",
     categoryURL: "game",
     url: p11,
+    wide: false,
+    price: 55000,
+  },
+  {
+    name: "Smart Lamp",
+    description:
+      "Proyek ini menggunakan ESP32 sebagai mikrokontroler utama yang terhubung ke bot Telegram untuk mengendalikan lampu secara jarak jauh. Sistem ini memanfaatkan relay 5V dual channel untuk mengontrol daya ke lampu.",
+    detail: pd15,
+    category: "Internet of Things",
+    categoryURL: "internet-of-things",
+    url: p12,
+    wide: false,
+    price: 55000,
+  },
+  {
+    name: "Running Text",
+    description:
+      "Running text dengan Arduino adalah tampilan teks berjalan yang dapat dikendalikan menggunakan mikrokontroler Arduino. Umumnya, running text ini menggunakan modul LED matrix, untuk menampilkan karakter yang bergerak dari kanan ke kiri atau sesuai pengaturan lainnya.",
+    detail: pd16,
+    category: "Internet of Things",
+    categoryURL: "internet-of-things",
+    url: p13,
+    wide: false,
+    price: 55000,
+  },
+  {
+    name: "Absensi Berbasis RFID",
+    description:
+      "Sistem ini menggunakan Arduino dan sensor RFID untuk membaca UID kartu NFC, lalu mengirimnya ke server database melalui WiFi atau kabel. Server memverifikasi UID, mencatat waktu scan dan status kehadiran jika valid. Arduino memberikan umpan balik dengan LED atau buzzer sesuai hasil verifikasi.",
+    detail: pd17,
+    category: "Internet of Things",
+    categoryURL: "internet-of-things",
+    url: p14,
+    wide: false,
+    price: 55000,
+  },
+  {
+    name: "RFID Door Lock",
+    description:
+      "Sistem pengunci pintu berbasis Arduino yang menggunakan teknologi RFID (Radio Frequency Identification) untuk mengontrol akses masuk. Sistem ini bekerja dengan cara membaca kartu atau tag RFID yang telah terdaftar, kemudian membandingkannya dengan database yang tersimpan dalam mikrokontroler.",
+    detail: pd18,
+    category: "Internet of Things",
+    categoryURL: "internet-of-things",
+    url: p16,
+    wide: false,
+    price: 55000,
+  },
+  {
+    name: "SmartLock PIN",
+    description:
+      "SmartLock Arduino adalah sistem kunci pintu otomatis berbasis Arduino yang menggunakan keypad sebagai metode akses utama. Saat pengguna memasukkan kode PIN yang benar, sistem akan mengaktifkan servo untuk membuka kunci pintu. Jika kode yang dimasukkan salah, buzzer akan berbunyi sebagai tanda peringatan.",
+    detail: pd19,
+    category: "Internet of Things",
+    categoryURL: "internet-of-things",
+    url: p17,
+    wide: false,
+    price: 55000,
+  },
+  {
+    name: "Miniatur Lampu Lalu Lintas",
+    description:
+      "Proyek ini merupakan miniatur sistem lampu lalu lintas yang menggunakan mikrokontroler Arduino sebagai pengontrol utama. Lampu lalu lintas ini bekerja berdasarkan sistem delay waktu, yang berarti setiap warna lampu (merah, kuning, dan hijau) menyala dalam interval waktu tertentu secara otomatis.",
+    detail: pd14,
+    category: "Internet of Things",
+    categoryURL: "internet-of-things",
+    url: p15,
+    wide: false,
+    price: 55000,
+  },
+  {
+    name: "Desain Grafis",
+    description:
+      "Desain grafis adalah proses komunikasi visual yang menggunakan gambar, tulisan, bentuk, dan elemen visual lainnya untuk menyampaikan pesan. Desain grafis dapat digunakan untuk berbagai tujuan, seperti komersial, sosial, atau pribadi.",
+    detail: pd20,
+    category: "Desain",
+    categoryURL: "desain",
+    url: p18,
     wide: false,
     price: 55000,
   },

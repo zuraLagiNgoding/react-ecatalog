@@ -56,8 +56,8 @@ function Landing() {
               );
             } else {
               return (
-                <Link
-                  to={"/category/" + product.url}
+                <a
+                  href={"/category/desain/Desain%20Grafis"}
                   key={index}
                   className={clsx(
                     "flex flex-col relative bg-cover bg-center rounded-lg p-4 hover:scale-105 transition shadow-lg",
@@ -76,7 +76,7 @@ function Landing() {
                   <div className="w-full absolute bottom-0 left-0 pb-4 pt-16 text-center bg-gradient-to-t from-neutral-100 to-indigo-transparent rounded-lg">
                     <p className="font-medium">{product.name}</p>
                   </div>
-                </Link>
+                </a>
               );
             }
           })}
