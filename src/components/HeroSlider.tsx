@@ -67,7 +67,7 @@ const HeroSlider: React.FC<SliderProps> = ({
             key={index}
             src={url}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover bg-top"
           />
         ))}
       </div>
